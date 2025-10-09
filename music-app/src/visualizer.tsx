@@ -63,5 +63,12 @@ export default function Visualizer({ audio }: VisualizerProps) {
     // Cleanup not needed for MediaElementSource, we reuse it
   }, [audio]);
 
-  return <canvas ref={canvasRef} width={1300} height={500}></canvas>;
+  return (
+    <canvas
+      ref={canvasRef}
+      width={400}
+      height={500}
+      className="bg-black rounded-xl"
+    ></canvas>
+  );
 }
