@@ -67,6 +67,9 @@ Some of the main challenges in this project included:
 - Handling browser autoplay restrictions
 - Managing uploaded audio files alongside preset tracks
 
+## Live Demo
+https://seeingmusic.netlify.app
+
 ## Installation
 
 Clone the repository:
