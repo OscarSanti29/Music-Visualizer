@@ -54,6 +54,12 @@ export default function Audio() {
           </button>
         ))}
       </div>{" "}
+      <input
+        type="file"
+        accept="audio/*"
+        onChange={handleFileUpload}
+        className=" rounded-lg bg-[#6dceff] p-10 shadow-xl font-semibold text-3xl cursor-pointer transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-[#00a4f6] hover:text-white"
+      />
     </div>
   );
 }
