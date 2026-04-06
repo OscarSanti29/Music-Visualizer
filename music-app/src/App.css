@@ -1,6 +1,6 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
 
-
-h2 {
-    color: #00a4f6;
+h1 {
+    font-family: "Bruno Ace SC", sans-serif;
 }

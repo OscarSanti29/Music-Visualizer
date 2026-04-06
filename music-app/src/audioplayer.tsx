@@ -37,7 +37,7 @@ export default function Audio() {
 
   return (
     <div className="flex flex-col items-center space-y-4">
-      <div className="shadow-2xl rounded-xl bg-[#6dceff] p-5">
+      <div className="flex flex-col items-center gap-4">
         {/* Pass the actual audio element to the visualizer */}
         {audioRef.current && <Visualizer audio={audioRef.current} />}
         <audio controls ref={audioRef} className="m-auto p-2"></audio>
@@ -54,12 +54,6 @@ export default function Audio() {
           </button>
         ))}
       </div>{" "}
-      <input
-        type="file"
-        accept="audio/*"
-        onChange={handleFileUpload}
-        className=" rounded-lg bg-[#6dceff] p-10 shadow-xl font-semibold text-3xl cursor-pointer transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-[#00a4f6] hover:text-white"
-      />
     </div>
   );
 }

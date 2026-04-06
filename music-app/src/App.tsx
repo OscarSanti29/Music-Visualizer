@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div>
-        <h1 className="text-5xl text-center font-semibold m-10">
+        <h1 className="text-7xl text-center m-10 text-white">
           Music Visualizer
         </h1>
         <Audio />
