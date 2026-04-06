@@ -1,69 +1,75 @@
-🎵 Music Visualizer
+# Music Visualizer
 
-A real-time music visualizer built with React, TypeScript, and the Web Audio API.
-Upload a song or connect a Spotify track and watch the visuals move to the rhythm of your music.
+A real-time music visualizer built with **React**, **TypeScript**, **Vite**, and the **Web Audio API**.  
+This project analyzes audio frequency data and turns it into animated canvas visuals that react to music in real time.
 
-🚀 Features
+## Overview
 
-🎧 Upload your own MP3 or use a live audio source
+The app lets users:
+- Play from preset tracks
+- Upload their own audio file
+- Watch a live audio visualization update as the music plays
 
-🌈 Real-time visualizations using Canvas and the Web Audio API
+This project was built to practice working with:
+- Browser audio APIs
+- Canvas rendering
+- React state and refs
+- TypeScript in a more interactive UI project
 
-⚙️ Adjustable visual styles (bars, waves, circles, etc.)
+## Features
 
-💻 Built with React + TypeScript for scalability and type safety
+- Real-time music visualization using the **Web Audio API**
+- Audio analysis through **AnalyserNode**
+- Animated canvas rendering with `requestAnimationFrame`
+- Preset music tracks included in the app
+- File upload support for local audio playback
+- Built with **React + TypeScript**
+- Styled with **Tailwind CSS**
 
-📱 Responsive layout — works on desktop and mobile
+## Tech Stack
 
-🧠 How It Works
+- **React**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **Web Audio API**
+- **HTML Canvas**
 
-The app uses the Web Audio API to analyze audio data in real time:
+## How It Works
 
-Creates an AudioContext and connects it to the uploaded audio file.
+When audio is played, the app:
 
-Uses an AnalyserNode to capture frequency and waveform data.
+1. Creates an `AudioContext`
+2. Connects the audio element to a `MediaElementSource`
+3. Passes the audio through an `AnalyserNode`
+4. Reads frequency data from the analyser
+5. Draws animated bars on a canvas
+6. Continuously updates the visualization using `requestAnimationFrame`
 
-Draws shapes on an HTML <canvas> element that react to the music’s energy levels.
+## Why I Built This
 
-Updates frames continuously with requestAnimationFrame() for smooth animation.
+I wanted to build a project that was more interactive than a standard CRUD app and would help me practice working with browser APIs in a visual way.
 
-🛠️ Installation
-# Clone the repository
-git clone https://github.com/yourusername/music-visualizer.git
+This project helped me improve my understanding of:
+- Audio processing in the browser
+- React refs for DOM/audio handling
+- Animation loops
+- Rendering dynamic visuals from live data
+- Structuring a TypeScript React app
 
-# Navigate into the project folder
-cd music-visualizer
+## Challenges
 
-# Install dependencies
-npm install
+Some of the main challenges in this project included:
 
-# Start the development server
-npm run dev
+- Connecting the audio element correctly to the Web Audio API
+- Avoiding repeated creation of audio nodes
+- Keeping canvas animation smooth
+- Handling browser autoplay restrictions
+- Managing uploaded audio files alongside preset tracks
 
-🎮 Usage
+## Installation
 
-Click one of the tracks or upload a file from your computer.
+Clone the repository:
 
-Play the audio — the visualization will automatically begin.
-
-Experiment with different tracks and enjoy the visuals!
-
-🧩 Tech Stack
-
-React + TypeScript
-
-Vite (for fast development)
-
-TailwindCSS (for styling)
-
-Web Audio API
-
-Canvas API
-🤝 Contributing
-
-Contributions, feedback, and ideas for new visualization modes are welcome!
-Feel free to fork the repo and open a pull request.
-
-📄 License
-
-MIT License © 2025 [Oscar Santiesteban]
+```bash
+git clone https://github.com/OscarSanti29/Music-Visualizer.git
