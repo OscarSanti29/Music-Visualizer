@@ -38,17 +38,15 @@ export default function Audio() {
   return (
     <div className="flex flex-col items-center space-y-4">
       <div className="flex flex-col items-center gap-4">
-        {/* Pass the actual audio element to the visualizer */}
         {audioRef.current && <Visualizer audio={audioRef.current} />}
         <audio controls ref={audioRef} className="m-auto p-2"></audio>
       </div>
       <div className="flex space-x-4">
-        {/* This is the actual audio element */}
         {presetTracks.map((track) => (
           <button
             key={track.name}
             onClick={() => setAudioSrc(track.src)}
-            className=" rounded-2xl text-xl text-white font-semibold shadow-xl p-2 bg-[#00a4f6] cursor-pointer transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
+            className=" rounded-2xl text-xl text-white font-semibold shadow-xl p-2 bg-red-500 hover:bg-red-600 text-white cursor-pointer transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
           >
             {track.name}
           </button>
@@ -58,7 +56,7 @@ export default function Audio() {
         type="file"
         accept="audio/*"
         onChange={handleFileUpload}
-        className=" rounded-lg bg-[#6dceff] p-10 shadow-xl font-semibold text-3xl cursor-pointer transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-[#00a4f6] hover:text-white"
+        className=" rounded-lg bg-red-500 hover:bg-red-600 text-white p-10 shadow-xl font-semibold text-3xl cursor-pointer transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-[#00a4f6] hover:text-white"
       />
     </div>
   );
